@@ -62,3 +62,42 @@ export interface SearchParams {
   guests?: number;
   filters?: FilterOptions;
 }
+
+// PropertyProps interface matching PROPERTYLISTINGSAMPLE structure
+export interface PropertyProps {
+  name: string;
+  address: {
+    state: string;
+    city: string;
+    country: string;
+  };
+  rating: number;
+  category: string[];
+  price: number;
+  offers: {
+    bed: string;
+    shower: string;
+    occupants: string;
+  };
+  image: string;
+  discount: string;
+}
+
+// Pill component props
+export interface PillProps {
+  label: string;
+  isActive?: boolean;
+  onClick?: () => void;
+  variant?: 'default' | 'outlined';
+  size?: 'small' | 'medium' | 'large';
+  icon?: React.ReactNode;
+  disabled?: boolean;
+  className?: string;
+}
+
+// PropertyCard component props
+export interface PropertyCardProps {
+  property: PropertyProps;
+  onClick?: () => void;
+  className?: string;
+}
