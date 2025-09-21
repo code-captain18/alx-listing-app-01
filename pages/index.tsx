@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Layout from "../components/layout/Layout";
 import Button from "../components/common/Button";
 import Pill from "../components/common/Pill";
 import PropertyCard from "../components/common/PropertyCard";
@@ -17,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section
         className="relative h-[80vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
@@ -43,9 +42,8 @@ export default function Home() {
               Start Exploring
             </Button>
             <Button
-              variant="secondary"
               size="large"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold w-full sm:w-auto"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold w-full sm:w-auto !text-white hover:!text-gray-900"
             >
               Learn More
             </Button>
@@ -231,6 +229,6 @@ export default function Home() {
       </section>
 
       {/* Additional sections can go here */}
-    </Layout>
+    </>
   );
 }
