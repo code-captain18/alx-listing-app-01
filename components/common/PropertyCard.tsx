@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-import { PropertyCardProps } from '../../interfaces';
-import { PLACEHOLDER_IMAGES } from '../../constants';
+import { PropertyCardProps } from '@/interfaces';
+import { PLACEHOLDER_IMAGES } from '@/constants';
 
 const PropertyCard: React.FC<PropertyCardProps> = ({
     property,
     onClick,
     className = ''
 }) => {
-    const { name, address, rating, price, image, discount, offers } = property;
+    const { name, address, rating, price, images, discount, offers } = property;
 
     const handleClick = () => {
         if (onClick) {
@@ -36,7 +36,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             {/* Image Container */}
             <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                    src={image || PLACEHOLDER_IMAGES.PROPERTY}
+                    src={images[0] || PLACEHOLDER_IMAGES.PROPERTY}
                     alt={name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

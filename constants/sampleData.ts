@@ -1,4 +1,4 @@
-import { Property } from '../interfaces';
+import { Property } from '@/interfaces';
 
 // Sample property data for development and testing
 export const SAMPLE_PROPERTIES: Property[] = [

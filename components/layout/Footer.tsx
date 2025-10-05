@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { UI_TEXT, ROUTES } from '../../constants';
+import { UI_TEXT, ROUTES } from '@/constants';
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();

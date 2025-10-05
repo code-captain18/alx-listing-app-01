@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import Button from "../components/common/Button";
-import Pill from "../components/common/Pill";
-import PropertyCard from "../components/common/PropertyCard";
-import { HERO_IMAGES, FILTER_LABELS, PROPERTYLISTINGSAMPLE } from "../constants";
+import { useRouter } from "next/router";
+import Button from "@/components/common/Button";
+import Pill from "@/components/common/Pill";
+import PropertyCard from "@/components/common/PropertyCard";
+import { HERO_IMAGES, FILTER_LABELS, PROPERTYLISTINGSAMPLE } from "@/constants";
 
 export default function Home() {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const router = useRouter();
 
   const handleFilterClick = (filter: string) => {
     setActiveFilters(prev =>
@@ -204,10 +206,10 @@ export default function Home() {
                 key={index}
                 property={property}
                 onClick={() => {
-                  console.log('Navigate to property:', property.name);
-                  // Handle navigation to property details
+                  // Navigate to property detail page using the property name as ID
+                  router.push(`/property/${encodeURIComponent(property.name)}`);
                 }}
-                className="hover:shadow-xl transition-shadow duration-300"
+                className="hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               />
             ))}
           </div>

@@ -66,6 +66,7 @@ export interface SearchParams {
 // PropertyProps interface matching PROPERTYLISTINGSAMPLE structure
 export interface PropertyProps {
   name: string;
+  description: string;
   address: {
     state: string;
     city: string;
@@ -79,7 +80,7 @@ export interface PropertyProps {
     shower: string;
     occupants: string;
   };
-  image: string;
+  images: string[];
   discount: string;
 }
 

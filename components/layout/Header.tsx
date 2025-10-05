@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { UI_TEXT, PROPERTY_TYPES, ROUTES } from '../../constants';
-import Button from '../common/Button';
+import { UI_TEXT, PROPERTY_TYPES, ROUTES } from '@/constants';
+import Button from '@/components/common/Button';
 
 const Header: React.FC = () => {
     const [searchLocation, setSearchLocation] = useState('');
